@@ -1,7 +1,7 @@
     version: '3'
      
     services:
-        server:
+        server1:
             build:
                 context: ./docker
                 args:
@@ -10,3 +10,13 @@
             hostname: server
             ports:
                 - "2222:22"
+
+        server2:
+            build:
+                context: ./docker
+                args:
+                    SSH_MASTER_USER: ${SSH_MASTER_USER}
+                    SSH_MASTER_PASS: ${SSH_MASTER_PASS}
+            hostname: server
+            ports:
+                - "3333:22"

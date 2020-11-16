@@ -1,0 +1,13 @@
+---
+- hosts: all
+  tasks:
+  - name: "create file"
+    file:
+      path: "server.txt"
+      state: touch
+
+  - name: "modify file"
+    lineinfile:
+      path: "server.txt"
+      line: 'hello douch bag'
+

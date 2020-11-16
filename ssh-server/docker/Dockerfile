@@ -8,7 +8,8 @@ RUN apt-get update \
  && apt-get install -y --no-install-recommends \
     nano \
     sudo \
-    openssh-server
+    openssh-server \
+    python3
  
 COPY ssh_config /etc/ssh/ssh_config
 COPY sshd_config /etc/ssh/sshd_config
