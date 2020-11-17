@@ -1,12 +1,11 @@
-# ansible-tp
-
-# ssh-server
+* ssh-server
 ``` bash
+cd ssh-server
 docker-compose up 
 ``` 
-#ansible
+* ansible
 ``` bash
-ssh-keygen -R <IP_container>
-ssh-copy-id kubecorn@<IP_container>
-ansible-playbook -i host.ini jobs.yml -u kubecorn
+cd ansible
+./sshSetup.sh
+ansible-playbook -i host.ini files-creation/playbook.yml
 ```
