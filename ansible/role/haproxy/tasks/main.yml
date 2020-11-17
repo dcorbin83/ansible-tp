@@ -1,0 +1,12 @@
+---
+# tasks file for haproxy
+
+- name: apt update
+  apt:
+    update-cache: yes
+    cache_valid_time: 3600
+
+- name: install tree
+  apt:
+    name: tree 
+    state: present

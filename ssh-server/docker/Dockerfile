@@ -9,7 +9,7 @@ RUN apt-get update \
     nano \
     sudo \
     openssh-server \
-    python3
+    python3.5
  
 COPY ssh_config /etc/ssh/ssh_config
 COPY sshd_config /etc/ssh/sshd_config
