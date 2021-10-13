@@ -13,7 +13,8 @@ RUN apt-get update \
  
 COPY ssh_config /etc/ssh/ssh_config
 COPY sshd_config /etc/ssh/sshd_config
- 
+
+COPY .env /usr/local/bin/.env 
 COPY user.sh /usr/local/bin/user.sh
 RUN chmod +x /usr/local/bin/user.sh
 RUN /usr/local/bin/user.sh

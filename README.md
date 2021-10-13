@@ -1,11 +1,12 @@
 * ssh-server
 ``` bash
 cd ssh-server
-docker-compose up 
+docker-compose rm
+docker-compose up --build
 ``` 
-* ansible
+* ansible 
 ``` bash
 cd ansible
 ./sshSetup.sh
-ansible-playbook -i host.ini files-creation/playbook.yml
+ansible-playbook -i host.ini files-creation/playbook.yml -u {SSH_MASTER_USER}
 ```
