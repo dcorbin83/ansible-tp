@@ -9,5 +9,5 @@
   - name: "modify file"
     lineinfile:
       path: "server.txt"
-      line: 'hello douch bag'
+      line: 'hello!'
 
