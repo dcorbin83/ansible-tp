@@ -90,4 +90,7 @@ You will need to restart the sshd service for changes to take effect.
     Write-Host $msg -ForegroundColor green
 }
 
+Set-Service -Name sshd -StartupType 'Automatic'
+
+
 Write-Verbose "Ending SSHD setup process."
